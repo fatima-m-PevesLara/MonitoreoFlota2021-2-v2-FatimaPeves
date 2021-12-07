@@ -59,10 +59,18 @@ public class Ventana extends Application {
 
         // Entregas programadas para una misma ruta
         GuiaEntrega guia = new GuiaEntrega();
-        guia.agregarEntrega(new EntregaProgramada("09:00-10:00", "23/11/2021"));
-        guia.agregarEntrega(new EntregaProgramada("10:00-11:00", "23/11/2021"));
-        guia.agregarEntrega(new EntregaProgramada("12:00-13:00", "23/11/2021"));
+        guia.agregarEntrega(new EntregaProgramada("09:00-10:00", "23/12/2021"));
+        guia.agregarEntrega(new EntregaProgramada("10:00-11:00", "23/12/2021"));
+        guia.agregarEntrega(new EntregaProgramada("12:00-13:00", "23/12/2021"));
+        guia.agregarEntrega(new EntregaReprogramada("14:00-15:00", "23/12/2021"));
         guia.listarEntrega();
+        System.out.println("[Cliente][Guia] Costo total "+guia.calcularCosto());
+
+        GuiaEntrega guiaReprogramada = new GuiaEntrega();
+        guiaReprogramada.agregarEntrega(new EntregaReprogramada("15:00-16:00", "07/12/2021"));
+        guiaReprogramada.agregarEntrega(new EntregaReprogramada("16:00-17:00", "05/01/2022"));
+        guiaReprogramada.listarEntrega();
+        System.out.println("[Cliente][Guia Reprogramada] Costo total "+guiaReprogramada.calcularCosto());
 
         //GuiaEntrega guiaGeneral = new GuiaEntrega();
         //guiaGeneral.agregarEntrega(new EntregaProgramada("13:00-14:00", "24/11/2021"));
@@ -70,7 +78,7 @@ public class Ventana extends Application {
         //guiaGeneral.agregarEntrega(guia);
         //guiaGeneral.listarEntrega();
 
-        System.out.println("[Cliente][Guia General] Costo total "+guia.calcularCosto());
+        //System.out.println("[Cliente][Guia General] Costo total "+guia.calcularCosto());
 
         // Crear ruta con entrega y recojo
         ITipoServicio recojo = new RecojoTipoServicio();

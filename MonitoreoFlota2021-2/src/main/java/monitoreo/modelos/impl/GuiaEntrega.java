@@ -1,3 +1,4 @@
+
 package monitoreo.modelos.impl;
 
 import monitoreo.modelos.interfaces.IEntrega;

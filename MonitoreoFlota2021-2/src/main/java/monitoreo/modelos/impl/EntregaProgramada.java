@@ -4,9 +4,9 @@ import monitoreo.modelos.interfaces.IEntrega;
 
 public class EntregaProgramada implements IEntrega {
 
-    private String rangoHora;
-    private String fecha;
-    private Double costo = 50.90;
+    protected String rangoHora;
+    protected String fecha;
+    protected Double costo = 50.90;
 
     public EntregaProgramada(String rangoHora, String fecha)  {
 
