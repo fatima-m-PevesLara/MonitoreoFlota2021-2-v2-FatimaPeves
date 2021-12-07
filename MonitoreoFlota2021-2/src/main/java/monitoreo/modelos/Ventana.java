@@ -51,10 +51,15 @@ public class Ventana extends Application {
         });
 
         // Agrega el punto
-        PuntoMonitoreoBuilder puntoBuilder = new PuntoMonitoreoBuilder("Inicio del día");
+        /*PuntoMonitoreoBuilder puntoBuilder = new PuntoMonitoreoBuilder("Inicio del día");
         puntoBuilder.withSimbolo(SimpleMarkerSymbol.Style.DIAMOND, 0xFF00FF00, 10);
         puntoBuilder.withUbicacion(-12.05310, -77.08552);
-        Punto puntoInicial = puntoBuilder.build();
+        Punto puntoInicial = puntoBuilder.build();*/
+
+        // Agregar el punto usando Fachada
+        FacadePuntoMonitoreo fachadaPuntoMon = new FacadePuntoMonitoreo();
+        Punto puntoInicial = fachadaPuntoMon.construirPuntoMonitoreo("Inicio del dia", -12.05310, -77.08552,0xFF00FF00, 10);
+
         facade.addGraphicsOverlay(puntoInicial.getGrafico());
 
         // Entregas programadas para una misma ruta

@@ -33,4 +33,10 @@ public class MapaBaseProxy implements IMapaBase {
         return map;
     }
     
+    @Override
+    public Viewpoint getViewpoint(double x, double y, int escala) {
+        MapaBase mb = new MapaBase(2);   
+        return mb.getViewpoint(x, y, escala);
+    }
+
 }

@@ -19,6 +19,14 @@ public class MapaBase implements IMapaBase {
 
         return mapa;
     }
+
+    @Override
+    public Viewpoint getViewpoint(double x, double y, int escala) {
+        
+        Viewpoint viewpoint = new Viewpoint(x, y, escala);
+
+        return viewpoint;
+    }
     
     private void creaMapa(int tipo) {
 
